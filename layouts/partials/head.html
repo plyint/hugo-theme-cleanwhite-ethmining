@@ -49,8 +49,6 @@
 
     <link rel="canonical" href="{{ .URL | relURL }}">
 
-    <link rel="stylesheet" href="{{ "css/iDisqus.min.css" | relURL }}"/>
-	
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="{{ "css/bootstrap.min.css" | relURL }}">
 
@@ -71,9 +69,6 @@
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
 
-    <!--
-    <script src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    -->
     <!-- jQuery -->
     <script src="{{ "js/jquery.min.js" | relURL }}"></script>
     
@@ -82,6 +77,9 @@
     
     <!-- Hux Theme JavaScript -->
     <script src="{{ "js/hux-blog.min.js" | relURL }}"></script>
+
+    <!-- Mining Calculator JavaScript -->
+    <script src="{{ "js/calcwidget.js" | relURL }}"></script>
 
     <!-- Use the docco color scheme of highlight.js to highlight the code in the page -->
     {{ if .Site.Params.highlightjs }}
@@ -96,6 +94,15 @@
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
     {{ end }}
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-5152175927318115",
+        enable_page_level_ads: true
+      });
+    </script>
 
 </head>
 
